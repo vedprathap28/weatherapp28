@@ -1,0 +1,99 @@
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  margin: 20px;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+  flex: 1;
+  backdrop-filter: blur(15px);
+  animation: backgroundAnimation 10s infinite alternate;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1);
+  }
+}
+
+.weather-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.weather-card .big-text {
+  font-size: 60px;
+}
+
+.weather-card .emoji {
+  font-size: 60px;
+  margin-left: 5px;
+}
+
+.space {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-card .flex {
+  display: flex;
+  align-items: center;
+}
+
+.weather-card .humidity-text,
+.weather-card .wind-text {
+  margin-right: 5px;
+}
+
+/* Dark mode styles */
+.weather-card.dark-mode {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #0ff;
+  backdrop-filter: blur(15px);
+  animation: darkModeAnimation 10s infinite alternate;
+}
+
+@keyframes darkModeAnimation {
+  0% {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+  }
+}
+
+.weather-card.dark-mode h2 {
+  color: #0ff;
+}
